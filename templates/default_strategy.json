@@ -1,0 +1,10 @@
+{
+    "strategy_name": "DefaultTrading",
+    "risk_level": "moderate",
+    "parameters": {
+      "moving_average_window": 14,
+      "stop_loss": 0.05,
+      "take_profit": 0.1
+    }
+  }
+  

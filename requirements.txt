@@ -1,0 +1,15 @@
+# Core dependencies
+fastapi==0.95.0
+uvicorn[standard]==0.22.0
+
+# Additional dependencies (example)
+pydantic==1.10.8
+requests==2.31.0
+
+# Database support (example for PostgreSQL with SQLAlchemy)
+sqlalchemy==1.4.46
+asyncpg==0.27.0
+
+# Optional: Testing and development tools
+pytest==7.4.0
+httpx==0.24.1
