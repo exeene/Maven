@@ -1,6 +1,6 @@
 # Maven AI-Powered Trading Assistant SDK for Solana | OpenAI Integration | Personalized Waifus for Smarter Trading**
 
-Hello and welcome! The Maven SDK empowers developers to create personalized AI trading assistants tailored specifically for Solana cryptocurrency trading. From character customization to actionable insights, this SDK is designed to make trading smarter, more engaging, and emotionally supportive.
+Hello and welcome! The Maven SDK enables developers to build customized AI trading assistants specifically for Solana cryptocurrency trading. With features like character personalization and actionable insights, this SDK aims to enhance the trading experience, making it smarter, more interactive, and emotionally supportive.
 
 ---
 
