@@ -1,6 +1,6 @@
 # Maven AI-Powered Trading Assistant SDK for Solana | OpenAI Integration | Personalized Waifus for Smarter Trading**
 
-Hello and welcome! 🚀 The Maven SDK empowers developers to create personalized AI trading assistants tailored specifically for Solana cryptocurrency trading. From character customization to actionable insights, this SDK is designed to make trading smarter, more engaging, and emotionally supportive.
+Hello and welcome! The Maven SDK empowers developers to create personalized AI trading assistants tailored specifically for Solana cryptocurrency trading. From character customization to actionable insights, this SDK is designed to make trading smarter, more engaging, and emotionally supportive.
 
 ---
 
@@ -8,39 +8,39 @@ Hello and welcome! 🚀 The Maven SDK empowers developers to create personalized
 
 Here’s what makes Maven SDK a game-changer for Solana trading:
 
-### 🎭 **Personalized AI Waifus for Trading**
+### **Personalized AI Waifus for Trading**
 
 Create unique AI trading assistants with customizable personalities and interaction styles.
 
-* **12 Default Personalities** : Launch quickly with pre-built profiles like *Analytic Sensei* 🧠 and *Meme Coin Maven* 🤡
+* **12 Default Personalities** : Launch quickly with pre-built profiles like *Analytic Sensei* and *Meme Coin Maven*
 * **Deep Customization** : Mix traits from different profiles or create entirely new personalities
 * **Dynamic Adaptation** : Characters automatically switch profiles during market volatility using `profile_switcher` module
-* **Visual Customization** : Design unique appearances with CSS/WebGL styling 👗
+* **Visual Customization** : Design unique appearances with CSS/WebGL styling
 
-### 🤝 **Seamless Integration with OpenAI API**
+### **Seamless Integration with OpenAI API**
 
 Generate context-aware trading advice and market insights using OpenAI’s powerful API.
 
-### 📊 **Trading Strategy Support**
+### **Trading Strategy Support**
 
 Define trading strategies via JSON, tailored to users’ goals, risk tolerance, and preferences.
 
-### 💡 **Actionable Insights**
+### **Actionable Insights**
 
 Offer in-depth portfolio analysis, risk assessments, and informed recommendations for confident trading.
 
-### 💌 **Emotional Support**
+### **Emotional Support**
 
 Help users stay composed during market volatility with personalized emotional support from AI waifus.
 
-### 🤖 **Smart Trading Infrastructure**
+### **Smart Trading Infrastructure**
 
-* **OpenAI-Powered Insights** 🧠 - Real-time market analysis powered by GPT-4
-* **Strategy Blueprints** 📊 - Pre-built templates for swing trading, arbitrage, and more
-* **Risk Guardians** ⚠️ - Automatic position sizing based on volatility
-* **Emotional AI** 💞 - Mood-adaptive responses during market turbulence
+* **OpenAI-Powered Insights** - Real-time market analysis powered by GPT-4
+* **Strategy Blueprints** - Pre-built templates for swing trading, arbitrage, and more
+* **Risk Guardians**  - Automatic position sizing based on volatility
+* **Emotional AI** - Mood-adaptive responses during market turbulence
 
-### 📈 **Multi-Exchange Support**
+### **Multi-Exchange Support**
 
 * Native Solana DEX integration (Raydium, Orca)
 * Cross-chain monitoring through CCXT
@@ -48,14 +48,14 @@ Help users stay composed during market volatility with personalized emotional su
 
 ---
 
-## 🚀 **Getting Started**
+## **Getting Started**
 
-### **Prerequisites** 📋
+### **Prerequisites**
 
 - Python 3.8+
 - OpenAI API Key
 
-### **Installation** ⚙️
+### **Installation** 
 
 1️⃣ **Clone the repository**:
 
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 }  
 ```
 
-### **New Profile Quickstart** ⚡
+### **New Profile Quickstart** 
 
 ```
 from maven import WaifuTrader
@@ -100,9 +100,9 @@ trader.activate_profile("crisis_manager", volatility_threshold=0.4)
 
 ---
 
-## 🛠️ **Usage Examples**
+## **Usage Examples**
 
-### 🎉 **Initialize a Basic Waifu**
+### **Initialize a Basic Waifu**
 
 Run the `basic_setup.py` example to create a default AI trading assistant:
 
@@ -110,7 +110,7 @@ Run the `basic_setup.py` example to create a default AI trading assistant:
 python examples/basic_setup.py  
 ```
 
-### 🌟 **Customize a Character**
+### **Customize a Character**
 
 Load a personalized character configuration with `custom_character.py`:
 
@@ -129,7 +129,7 @@ Update `templates/default_character.json` with your desired traits and interacti
 }  
 ```
 
-### 📈 **Add Trading Strategies**
+### **Add Trading Strategies**
 
 Integrate custom trading strategies via JSON using `strategy_integration.py`:
 
@@ -149,13 +149,13 @@ Update `templates/default_strategy.json` with trading preferences:
 
 ---
 
-## 📚 **Documentation**
+## **Documentation**
 
 Comprehensive guides can be found in the `/docs/` directory:
 
-- **Customizing Waifus**: Learn how to personalize characters. 🎨
-- **Trading Strategies**: Integrate trading strategies using JSON. 📊
-- **OpenAI API Integration**: Connect your waifu to OpenAI for real-time insights. 🔗
+- **Customizing Waifus**: Learn how to personalize characters.
+- **Trading Strategies**: Integrate trading strategies using JSON.
+- **OpenAI API Integration**: Connect your waifu to OpenAI for real-time insights.
 
 * **Profile Inheritance Guide** : Combine traits from multiple base characters
 * **Volatility Response Handbook** : Configure automatic profile switching
@@ -164,15 +164,15 @@ Comprehensive guides can be found in the `/docs/` directory:
 
 ---
 
-## 📜 **License**
+## **License**
 
 This project is licensed under the MIT License. See `LICENSE` for details.
 
 ---
 
-## 🙏 **Acknowledgments**
+## **Acknowledgments**
 
-Special thanks to **OpenAI** for providing powerful API tools and to the **Solana community** for fostering innovation in crypto trading. 💡💖
+Special thanks to **OpenAI** for providing powerful API tools and to the **Solana community** for fostering innovation in crypto trading.
 
 ---
 
