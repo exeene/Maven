@@ -29,6 +29,7 @@ def error_handler(func: Callable[..., T]) -> Callable[..., Optional[T]]:
         try:
             return func(*args, **kwargs)
         except Exception as e:
-            logging.error(f"Error in {func.__name__}: {e}")
+            logging.exception(f"Error in {func.__name__}: {e}")
             return None
+
     return wrapper
