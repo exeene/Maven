@@ -1,7 +1,0 @@
-{
-    "openai_api_key": "your-api-key-here",
-    "character_config": "character.json",
-    "strategy_config": "strategies.json",
-    "max_tokens": 150,
-    "temperature": 0.7
-  }

@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from src.ai_waifu.api import OpenAIAPI
+from maven.llm_integration.openai_client import OpenAIAPI
 
 class TestOpenAIAPI(unittest.TestCase):
     def setUp(self):

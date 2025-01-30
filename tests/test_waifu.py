@@ -1,29 +1,32 @@
-import unittest
-from unittest.mock import patch, MagicMock
-from src.ai_waifu.waifu import AIWaifu
+import pytest
+from unittest.mock import Mock, patch
+from maven.core.waifu_trader import WaifuTrader
+from maven.core.profile_switcher import ProfileSwitcher
 
-class TestAIWaifu(unittest.TestCase):
-    @patch('src.ai_waifu.waifu.load_config')
-    def setUp(self, mock_load_config):
-        mock_load_config.return_value = {
-            "openai_api_key": "test_key",
-            "character_config": "test_character.json",
-            "strategy_config": "test_strategies.json",
-            "max_tokens": 150,
-            "temperature": 0.7
-        }
-        self.waifu = AIWaifu("config.json")
+@pytest.fixture
+def mock_solana():
+    with patch("maven.solana.client.SolanaClient") as mock:
+        mock.return_value.place_order.return_value = "order_123"
+        yield mock
 
-    def test_initialization(self):
-        self.assertIsNotNone(self.waifu.character)
-        self.assertIsNotNone(self.waifu.strategy)
-        self.assertIsNotNone(self.waifu.api)
+@pytest.fixture
+def mock_openai():
+    with patch("maven.llm_integration.openai_client.OpenAIAPI") as mock:
+        mock.return_value.get_response.return_value = "Buy more SOL!"
+        yield mock
 
-    @patch('src.ai_waifu.api.OpenAIAPI.generate_response')
-    def test_interact(self, mock_generate):
-        mock_generate.return_value = "Test response"
-        response = self.waifu.interact("Hello")
-        self.assertEqual(response, "Test response")
+def test_trade_execution(mock_solana, mock_openai):
+    trader = WaifuTrader(base_profile="default")
+    result = trader.execute_trade("SOL", 10.0, "buy")
+    assert "order_123" in result
+    mock_solana.return_value.place_order.assert_called_once()
 
-if __name__ == '__main__':
-    unittest.main()
+def test_profile_switching():
+    trader = WaifuTrader(base_profile="risk-averse")
+    trader.activate_profile("aggressive", 0.2)
+    assert trader.profile["risk_tolerance"] == "aggressive"
+
+def test_emotional_support():
+    trader = WaifuTrader(base_profile="tsundere")
+    msg = trader.provide_emotional_support()
+    assert "Stay calm" in msg

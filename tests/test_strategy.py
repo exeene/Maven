@@ -1,21 +1,16 @@
-import unittest
-from unittest.mock import patch
-from src.ai_waifu.strategy import TradingStrategy
+import pytest
+from maven.core.profile_switcher import ProfileSwitcher
 
-class TestTradingStrategy(unittest.TestCase):
-    @patch('src.ai_waifu.utils.load_config')
-    def test_strategy_loading(self, mock_load):
-        mock_load.return_value = {
-            "test_strategy": "Test strategy details"
-        }
-        strategy = TradingStrategy("dummy.json")
-        self.assertEqual(strategy.get_strategy("test_strategy"), "Test strategy details")
-        
-    def test_missing_strategy(self):
-        with patch('src.ai_waifu.utils.load_config') as mock_load:
-            mock_load.return_value = {}
-            strategy = TradingStrategy("dummy.json")
-            self.assertIn("No strategy found", strategy.get_strategy("missing"))
+def test_volatility_calculation():
+    ps = ProfileSwitcher()
+    prices = [100, 105, 98, 110, 95]
+    volatility = ps.calculate_volatility(prices)
+    assert 0.05 < volatility < 0.15
 
-if __name__ == '__main__':
-    unittest.main()
+def test_profile_switch_decision():
+    ps = ProfileSwitcher(threshold=0.1)
+    stable_prices = [100, 101, 100, 102]
+    volatile_prices = [100, 115, 90, 120]
+    
+    assert not ps.should_switch(stable_prices)
+    assert ps.should_switch(volatile_prices)

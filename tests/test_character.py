@@ -1,24 +1,19 @@
-import unittest
-from unittest.mock import patch
-from src.ai_waifu.character import Character
+import pytest
+import json
+from maven.core.waifu_trader import WaifuTrader
 
-class TestCharacter(unittest.TestCase):
-    @patch('src.ai_waifu.utils.load_config')
-    def test_character_creation(self, mock_load):
-        mock_load.return_value = {
-            "name": "Test",
-            "personality": "testy",
-            "interaction_style": "formal"
-        }
-        character = Character("dummy_path.json")
-        self.assertEqual(character.name, "Test")
-        self.assertEqual(character.personality, "testy")
-        
-    def test_default_values(self):
-        with patch('src.ai_waifu.utils.load_config') as mock_load:
-            mock_load.return_value = {}
-            character = Character("dummy.json")
-            self.assertEqual(character.name, "AI Waifu")
+def test_custom_profile_loading(tmp_path):
+    custom_profile = tmp_path / "custom.json"
+    custom_profile.write_text(json.dumps({
+        "name": "TestChan",
+        "risk_tolerance": "moderate"
+    }))
+    
+    trader = WaifuTrader(base_profile=str(custom_profile))
+    assert trader.profile["name"] == "TestChan"
+    assert trader.risk_manager.tolerance == "moderate"
 
-if __name__ == '__main__':
-    unittest.main()
+def test_default_profile():
+    trader = WaifuTrader(base_profile="default")
+    assert "risk_tolerance" in trader.profile
+    assert "personality" in trader.profile
