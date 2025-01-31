@@ -1,6 +1,6 @@
 # Import core components
 from .core.profile_switcher import ProfileSwitcher
-from .core.waifu_trader import WaifuTrader
+from .core.ai_trader import WaifuTrader
 
 # Expose interface tools
 from .interface.character import Character

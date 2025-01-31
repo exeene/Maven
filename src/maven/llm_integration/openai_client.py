@@ -29,3 +29,30 @@ class OpenAIAPI:
         
         self.last_request_time = time.time()
         return response["choices"][0]["message"]["content"]
+    
+    def get_market_analysis(self, market_data: dict) -> str:
+        """Generate actionable trading insights using real market data"""
+        prompt = f"""
+        Analyze this Solana market data for trading opportunities:
+        {json.dumps(market_data)}
+        
+        Provide recommendations considering:
+        - Recent price movements
+        - Liquidity pools
+        - Risk management
+        """
+        
+        return self._send_request(prompt)
+    
+    def get_risk_assessment(self, portfolio: dict) -> str:
+        """Generate portfolio risk analysis"""
+        prompt = f"""
+        Analyze this portfolio risk:
+        {json.dumps(portfolio)}
+        
+        Consider:
+        - Asset concentration
+        - Market volatility
+        - Diversification
+        """
+        return self._send_request(prompt)

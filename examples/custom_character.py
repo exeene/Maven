@@ -1,4 +1,4 @@
-from maven.core.waifu_trader import WaifuTrader
+from maven.core.ai_trader import WaifuTrader
 
 custom_traits = {
     "name": "CryptoChan",

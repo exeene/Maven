@@ -1,4 +1,4 @@
-from maven.interface.character import Character
-from maven.interface.visualizer import WaifuRenderer
+from maven.interface.character import AICharacter
+from maven.interface.visualizer import MarketVisualizer
 
-__all__ = ['Character', 'WaifuRenderer']
+__all__ = ['AICharacter', 'MarketVisualizer']

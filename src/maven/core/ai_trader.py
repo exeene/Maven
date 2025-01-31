@@ -4,7 +4,7 @@ from maven.solana.client import SolanaClient
 from maven.llm_integration.openai_client import OpenAIAPI
 from maven.core.profile_switcher import ProfileSwitcher
 
-class WaifuTrader:
+class AITrader:
     def __init__(self, base_profile: str, custom_traits: dict = None):
         """Initialize the AI trading assistant with a personality profile."""
         self.profile = self.load_profile(base_profile, custom_traits)

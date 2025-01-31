@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock, patch
-from maven.core.waifu_trader import WaifuTrader
+from maven.core.ai_trader import WaifuTrader
 from maven.core.profile_switcher import ProfileSwitcher
 
 @pytest.fixture

@@ -1,6 +1,6 @@
 import pytest
 import json
-from maven.core.waifu_trader import WaifuTrader
+from maven.core.ai_trader import WaifuTrader
 
 def test_custom_profile_loading(tmp_path):
     custom_profile = tmp_path / "custom.json"
