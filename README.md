@@ -12,10 +12,14 @@ Here’s what makes Maven SDK a game-changer for Solana trading:
 
 Create unique AI trading assistants with customizable personalities and interaction styles.
 
-* **12 Default Personalities** : Launch quickly with pre-built profiles like *Analytic Sensei* and *Meme Coin Maven*
-* **Deep Customization** : Mix traits from different profiles or create entirely new personalities
-* **Dynamic Adaptation** : Characters automatically switch profiles during market volatility using `profile_switcher` module
-* **Visual Customization** : Design unique appearances with CSS/WebGL styling
+* **Pre-built Profiles at Your Fingertips:**
+  Choose from 12 default character profiles such as *Analytic Sensei* and *Meme Coin Maven* to quickly launch your trading assistant. Each profile is designed with unique traits that cater to different trading styles and levels of emotional support.
+* **Deep Customization Options:**
+  Personalize every aspect of your AI Waifu. Mix traits from different profiles or create an entirely new personality by adjusting parameters like humor level, risk tolerance, and communication style. This flexibility ensures your assistant feels truly tailored to your needs.
+* **Dynamic Adaptation:**
+  Using the `profile_switcher` module, your AI Waifu can automatically adjust its behavior during periods of market volatility. This ensures that its responses and strategies remain aligned with current market conditions.
+* **Visual & Interaction Customization:**
+  Beyond personality, you can design a unique visual appearance using CSS/WebGL styling to match your brand or personal taste.
 
 ### **Seamless Integration with OpenAI API**
 
@@ -25,7 +29,7 @@ Generate context-aware trading advice and market insights using OpenAI’s power
 
 Define trading strategies via JSON, tailored to users’ goals, risk tolerance, and preferences.
 
-### **Actionable Insights**
+### **Actionable Insights** 
 
 Offer in-depth portfolio analysis, risk assessments, and informed recommendations for confident trading.
 
@@ -35,10 +39,14 @@ Help users stay composed during market volatility with personalized emotional su
 
 ### **Smart Trading Infrastructure**
 
-* **OpenAI-Powered Insights** - Real-time market analysis powered by GPT-4
-* **Strategy Blueprints** - Pre-built templates for swing trading, arbitrage, and more
-* **Risk Guardians**  - Automatic position sizing based on volatility
-* **Emotional AI** - Mood-adaptive responses during market turbulence
+* **Real-time Market Analysis:**
+  Powered by GPT-4 for up-to-date insights.
+* **Pre-built Strategy Blueprints:**
+  Templates available for swing trading, arbitrage, and more.
+* **Risk Management Tools:**
+  Automated position sizing and risk guardians that adapt to market conditions.
+* **Multi-Exchange Support:**
+  Native integration with Solana DEXs (Raydium, Orca) alongside cross-chain monitoring via CCXT, all within a unified portfolio dashboard.
 
 ### **Multi-Exchange Support**
 
@@ -55,7 +63,7 @@ Help users stay composed during market volatility with personalized emotional su
 - Python 3.8+
 - OpenAI API Key
 
-### **Installation** 
+### **Installation**
 
 1️⃣ **Clone the repository**:
 
@@ -79,7 +87,7 @@ pip install -r requirements.txt
 }  
 ```
 
-### **New Profile Quickstart** 
+### **New Profile Quickstart**
 
 ```
 from maven import WaifuTrader
@@ -96,7 +104,6 @@ trader = WaifuTrader(
 # Activate crisis management mode
 trader.activate_profile("crisis_manager", volatility_threshold=0.4)
 ```
-
 
 ---
 

@@ -31,7 +31,7 @@ default_strategy: "risk_averse" 💼
 
 ### 1. **Personality Traits** 🧠
 
-Configure core behavioral attributes that will shape your Waifu’s trading approach. 
+Configure core behavioral attributes that will shape your Waifu’s trading approach.
 
 ```javascript
 import { createWaifu } from 'ai-waifu-sdk';
@@ -118,6 +118,39 @@ Define how your Waifu interacts with the market, such as their strategy, risk pr
 - **Risk Indicators**: The technical indicators they prioritize.
 - **Notification Preferences**: What type of events they alert you on.
 
+```
+Utilize pre-built personality templates or create your own. The SDK includes three core profiles:
+
+```yaml
+# Available default profiles
+analytical: 📊 Data-driven decision maker
+cheerful: 😊 Optimistic motivator 
+sarcastic: 😏 Risk-aware realist
+```
+
+
+## 📝 Default Character Profiles
+
+The SDK comes with three core personality profiles. You can either use these defaults or customize your own:
+
+```
+# Available default profiles
+analytical: 📊 Data-driven decision maker
+cheerful: 😊 Optimistic motivator 
+sarcastic: 😏 Risk-aware realist
+```
+
+To switch or inherit from a default profile, use the following configuration:
+
+```
+# Inherit from a base profile
+extends: "default_professional" 📊
+overrides:
+  humor_level: 0.3  # Reduced humor for a more serious tone 😶
+  crisis_response: "calm_reassurance"  # Calm responses during market turbulence 🧘‍♀️
+```
+
+
 ---
 
 ## 📝 **Example Configurations**
@@ -172,3 +205,11 @@ overrides:
   humor_level: 0.3 😶
   crisis_response: "calm_reassurance" 🧘‍♀️
 ```
+
+## 📚 Documentation Update: Character Customization
+
+To help you get started with default profiles and further customization:
+
+* **Selecting Profiles:** Choose from pre-built profiles (`analytical`, `cheerful`, or `sarcastic`) as your starting point.
+* **Switching Profiles:** Use the `extends` property in your configuration to inherit from an existing profile and override specific parameters as needed.
+* **Examples & Guidelines:** Refer to the above examples for setting up a conservative investor or a day trader persona.
