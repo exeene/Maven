@@ -1,6 +1,6 @@
 import json
 
-class Character:
+class AICharacter:
     def __init__(self, name: str, personality: str, visual: str, config_path="configs/default_character.json"):
         """Initialize a character with predefined attributes or load from config."""
         self.name = name
@@ -25,3 +25,9 @@ class Character:
     def describe(self):
         """Return a formatted description of the character."""
         return f"Character: {self.name}\nPersonality: {self.personality}\nVisual: {self.visual}\nTraits: {self.traits}"
+    
+    def load_profile(self, profile_name: str, custom_traits: dict = None):
+        """Load profile from templates directory"""
+        profile_path = Path(__file__).parent.parent / "templates/default_character.json"
+        with open(profile_path, "r") as file:
+            profiles = json.load(file)

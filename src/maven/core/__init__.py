@@ -1,4 +1,4 @@
 from maven.core.profile_switcher import ProfileSwitcher
-from maven.core.waifu_trader import WaifuTrader
+from maven.core.ai_trader import AITrader
 
-__all__ = ['ProfileSwitcher', 'WaifuTrader']
+__all__ = ['ProfileSwitcher', 'AITrader']

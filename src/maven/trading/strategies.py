@@ -27,3 +27,23 @@ class Momentum(TradingStrategy):
         print("Executing Momentum strategy...")
         # Implement trading logic here
         return "Buy" if market_data['price_change'] > 0 else "Sell"
+    
+class ArbitrageStrategy(TradingStrategy):
+    def __init__(self):
+        super().__init__("DEX Arbitrage", risk_level=0.4)
+        self.dex_clients = {
+            'Raydium': RaydiumClient(),
+            'Orca': OrcaClient()
+        }
+
+    def execute(self, market_data):
+        """Real arbitrage implementation"""
+        price_diff = self._find_price_discrepancy()
+        if price_diff > 0.02:  # 2% threshold
+            return self._execute_arbitrage()
+        return "No arbitrage opportunity"
+
+    def _find_price_discrepancy(self):
+        raydium_price = self.dex_clients['Raydium'].get_price('SOL/USDC')
+        orca_price = self.dex_clients['Orca'].get_price('SOL/USDC')
+        return abs(raydium_price - orca_price)

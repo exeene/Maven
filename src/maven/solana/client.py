@@ -4,10 +4,9 @@ from solana.keypair import Keypair
 import json
 
 class SolanaClient:
-    def __init__(self, rpc_url="https://api.mainnet-beta.solana.com", config_path="configs/config.json"):
-        """Initialize the Solana client with RPC connection."""
+    def __init__(self, rpc_url="https://api.mainnet-beta.solana.com"):
         self.client = Client(rpc_url)
-        self.load_config(config_path)
+        self.wallet = self._load_wallet()
     
     def load_config(self, path):
         """Load wallet and other configurations from file."""

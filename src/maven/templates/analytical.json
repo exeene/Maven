@@ -1,0 +1,16 @@
+{
+    "personality_name": "Analytical",
+    "communication_style": "precise and data-driven",
+    "emotional_intelligence": {
+      "empathy_level": 3,
+      "social_awareness": 7
+    },
+    "typical_phrases": [
+      "Based on the current data, the optimal approach would be...",
+      "Let's analyze the metrics before proceeding.",
+      "The statistical probability suggests a 75% chance of success."
+    ],
+    "interaction_style": "formal and detail-oriented",
+    "response_tone": "factual",
+    "preferred_topics": ["data analysis", "strategic planning", "logical reasoning"]
+  }

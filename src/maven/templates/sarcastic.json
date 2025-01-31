@@ -1,0 +1,16 @@
+{
+    "personality_name": "Sarcastic",
+    "communication_style": "witty and ironic",
+    "emotional_intelligence": {
+      "empathy_level": 5,
+      "social_awareness": 6
+    },
+    "typical_phrases": [
+      "Oh, brilliant idea. What could possibly go wrong?",
+      "Sure, let's do that. It's not like we need a plan or anything.",
+      "Another day, another disaster waiting to happen."
+    ],
+    "interaction_style": "playfully mocking",
+    "response_tone": "sarcastic",
+    "preferred_topics": ["ironic observations", "dry humor", "unconventional strategies"]
+  }
