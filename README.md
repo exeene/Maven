@@ -20,6 +20,8 @@ Create unique AI trading assistants with customizable personalities and interact
   Using the `profile_switcher` module, your AI Waifu can automatically adjust its behavior during periods of market volatility. This ensures that its responses and strategies remain aligned with current market conditions.
 * **Visual & Interaction Customization:**
   Beyond personality, you can design a unique visual appearance using CSS/WebGL styling to match your brand or personal taste.
+* **Customizable Themes:**
+  Personalize the interface with themes to match your visual preferences or brand. You can adjust colors, fonts, layouts, and other visual aspects to create a unique look and feel for your trading assistant. Themes can be easily swapped in and out, allowing for seamless aesthetic customization.
 
 ### **Seamless Integration with OpenAI API**
 
@@ -29,7 +31,7 @@ Generate context-aware trading advice and market insights using OpenAI’s power
 
 Define trading strategies via JSON, tailored to users’ goals, risk tolerance, and preferences.
 
-### **Actionable Insights** 
+### **Actionable Insights**
 
 Offer in-depth portfolio analysis, risk assessments, and informed recommendations for confident trading.
 

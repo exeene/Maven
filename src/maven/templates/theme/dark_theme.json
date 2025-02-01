@@ -1,0 +1,13 @@
+{
+    "dark_theme": {
+        "name": "Dark Theme",
+        "background_color": "#121212",
+        "text_color": "#ffffff",
+        "accent_color": "#ff4081",
+        "font_family": "Verdana, sans-serif",
+        "avatar": {
+          "primary": "assets/avatars/dark_primary.png",
+          "secondary": "assets/avatars/dark_secondary.png"
+        }
+      }
+}
