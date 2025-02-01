@@ -1,0 +1,13 @@
+{
+  "custom_theme": {
+    "name": "Custom Theme",
+    "background_color": "#2e3b4e",
+    "text_color": "#dfe6ee",
+    "accent_color": "#ffa726",
+    "font_family": "Courier New, monospace",
+    "avatar": {
+      "primary": "assets/avatars/custom_primary.png",
+      "secondary": "assets/avatars/custom_secondary.png"
+    }
+  }
+}

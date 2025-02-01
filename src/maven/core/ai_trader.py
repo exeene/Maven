@@ -3,15 +3,17 @@ from maven.trading.risk_manager import RiskGuardian
 from maven.solana.client import SolanaClient
 from maven.llm_integration.openai_client import OpenAIAPI
 from maven.core.profile_switcher import ProfileSwitcher
+import os
 
 class AITrader:
     def __init__(self, base_profile: str, custom_traits: dict = None):
-        """Initialize the AI trading assistant with a personality profile."""
+        """Initialize the AI trading assistant with a personality profile and theme support."""
         self.profile = self.load_profile(base_profile, custom_traits)
         self.risk_manager = RiskGuardian(self.profile["risk_tolerance"])
         self.solana_client = SolanaClient()
         self.openai_api = OpenAIAPI()
         self.profile_switcher = ProfileSwitcher()
+        self.theme = self.load_theme("default_theme")
     
     def load_profile(self, profile_name: str, custom_traits: dict = None):
         """Load a predefined or customized personality profile."""
@@ -42,3 +44,21 @@ class AITrader:
     def provide_emotional_support(self):
         """Generate emotionally supportive messages during trading turbulence."""
         return f"{self.profile['name']} says: Stay calm, we got this! 💖"
+    
+    def list_available_themes(self):
+        """List available themes from the templates/themes directory."""
+        themes_dir = "templates/themes"
+        return [f.split(".")[0] for f in os.listdir(themes_dir) if f.endswith(".json")]
+    
+    def load_theme(self, theme_name: str):
+        """Load a theme from the templates/themes directory."""
+        theme_path = f"templates/themes/{theme_name}.json"
+        if os.path.exists(theme_path):
+            with open(theme_path, "r") as file:
+                return json.load(file)
+        return {}  # Return an empty theme if the file is missing
+    
+    def apply_theme(self, theme_name: str):
+        """Apply a selected theme based on user preference."""
+        self.theme = self.load_theme(theme_name)
+        print(f"Applied theme: {theme_name}")
