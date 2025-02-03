@@ -44,3 +44,8 @@ class ProfileSwitcher:
         should_switch = volatility >= threshold
         logger.debug(f"Volatility {volatility} vs threshold {threshold} => should_switch: {should_switch}")
         return should_switch
+
+    def switch_profile(self, new_profile, volatility_threshold):
+        current_volatility = self.trader.get_market_volatility()
+        if current_volatility > volatility_threshold:
+            self.trader.load_profile(new_profile)
