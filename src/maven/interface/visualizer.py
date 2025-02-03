@@ -100,3 +100,13 @@ class MarketVisualizer:
             self.mood = f"transitioning to {new_mood}" if step < steps else new_mood
             self.render_mood()
             plt.pause(0.2)  # Pause for animation effect
+
+    def visualize_heatmap(self, portfolio_data):
+        heatmap_data = self.prepare_heatmap_data(portfolio_data)
+        plt.imshow(heatmap_data, cmap='coolwarm')
+        plt.colorbar()
+        plt.show()
+
+    def prepare_heatmap_data(self, portfolio_data):
+        # Prepare data for heatmap visualization
+        pass
